@@ -1,22 +1,3 @@
-<script type="text/javascript">
-$(function(){
-// Bind the swipeHandler callback function to the swipe event on div.box
-$( "div#swipeable" ).on( "swiperight", swipeHandlerRight );
-// Callback function references the event target and adds the 'swipe' class to it
-function swipeHandlerRight( event ){
-window.location = '<cfoutput>#urlFor(route="guide", key=params.key - 1)#</cfoutput>';
-}
-});
-$(function(){
-// Bind the swipeHandler callback function to the swipe event on div.box
-$( "div#swipeable" ).on( "swipeleft", swipeHandlerLeft );
-// Callback function references the event target and adds the 'swipe' class to it
-function swipeHandlerLeft( event ){
-window.location = '<cfoutput>#urlFor(route="guide", key=params.key + 1)#</cfoutput>';
-}
-});
-</script>
-
 <div class="container" id="swipeable">
 <cfoutput>
 
